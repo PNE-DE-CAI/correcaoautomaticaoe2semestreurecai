@@ -3,723 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>São Paulo em Ação – Correção Automática | URE CAIEIRAS</title>
+<title>São Paulo em Ação 2º Semestre – Correção Automática | URE CAIEIRAS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* ========== IDENTIDADE VISUAL ========== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(145deg, #0a2f6c 0%, #041a3a 100%);
-  min-height: 100vh;
-  padding: 20px;
-  color: #1e293b;
-}
-
-.main-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  background: #0f1a24;
-  border-radius: 48px;
-  padding: 20px;
-  box-shadow: 0 30px 35px rgba(0,0,0,0.5), inset 0 1px 4px rgba(255,255,200,0.1);
-  border: 1px solid #d32f2f;
-}
-
-/* cabeçalho */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(10, 47, 108, 0.85);
-  backdrop-filter: blur(4px);
-  padding: 12px 24px;
-  border-radius: 60px;
-  margin-bottom: 25px;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.logo-area img {
-  height: 55px;
-  width: auto;
-  border-radius: 12px;
-  background: white;
-  padding: 4px;
-  object-fit: contain;
-}
-.logo-text {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffec9e;
-  line-height: 1.3;
-}
-.title-badge {
-  background: #d32f2f;
-  color: white;
-  padding: 6px 18px;
-  border-radius: 3rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 0.85rem;
-}
-
-/* cards padrão */
-.card {
-  background: white;
-  border-radius: 32px;
-  padding: 1.5rem;
-  margin-bottom: 1.8rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  border: 1px solid #e0e4e9;
-  transition: all 0.2s;
-}
-.card-header {
-  font-weight: 800;
-  font-size: 1rem;
-  color: #003b66;
-  border-left: 4px solid #ffb347;
-  padding-left: 12px;
-  margin-bottom: 20px;
-}
-.card-header.red {
-  border-left-color: #d32f2f;
-  color: #b91c1c;
-}
-
-h2, h3 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  color: #0a2f6c;
-}
-
-.section-eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #d32f2f;
-  margin-bottom: 0.5rem;
-}
-
-/* grids e elementos */
-.step-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.2rem;
-  margin: 1rem 0;
-}
-
-.step-card {
-  background: #f8fafc;
-  border-radius: 24px;
-  padding: 1.2rem;
-  border: 1px solid #e2e8f0;
-  transition: 0.2s;
-}
-.step-card .step-num {
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #d32f2f;
-  margin-bottom: 0.5rem;
-}
-
-.info-box, .warn-box {
-  border-radius: 24px;
-  padding: 1rem 1.2rem;
-  margin: 1rem 0;
-  font-size: 0.85rem;
-}
-.info-box {
-  background: #eef2ff;
-  border-left: 4px solid #0a2f6c;
-  color: #1e293b;
-}
-.warn-box {
-  background: #fff8e1;
-  border-left: 4px solid #f9a825;
-  color: #5d4a00;
-}
-
-/* tabelas */
-.percurso-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.8rem;
-}
-.percurso-table th {
-  background: #0a2f6c;
-  color: white;
-  padding: 10px 12px;
-  text-align: center;
-  font-weight: 600;
-}
-.percurso-table td {
-  padding: 10px 12px;
-  border-bottom: 1px solid #e2e8f0;
-  vertical-align: middle;
-  text-align: center;
-}
-
-/* form elements */
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 24px;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:linear-gradient(145deg,#0a2f6c 0%,#041a3a 100%);min-height:100vh;padding:20px;color:#1e293b}
+.main-container{max-width:1400px;margin:0 auto;background:#0f1a24;border-radius:48px;padding:20px;box-shadow:0 30px 35px rgba(0,0,0,.5),inset 0 1px 4px rgba(255,255,200,.1);border:1px solid #d32f2f}
+.header{display:flex;justify-content:space-between;align-items:center;background:rgba(10,47,108,.85);backdrop-filter:blur(4px);padding:12px 24px;border-radius:60px;margin-bottom:25px;flex-wrap:wrap;gap:15px}
+.logo-area{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo-area img{height:55px;width:auto;border-radius:12px;background:#fff;padding:4px;object-fit:contain}
+.logo-text{font-size:1rem;font-weight:600;color:#ffec9e;line-height:1.3}
+.title-badge{background:#d32f2f;color:#fff;padding:6px 18px;border-radius:3rem;font-weight:700;letter-spacing:1px;font-size:.85rem}
+.card{background:#fff;border-radius:32px;padding:1.5rem;margin-bottom:1.8rem;box-shadow:0 8px 20px rgba(0,0,0,.2);border:1px solid #e0e4e9}
+.card-header{font-weight:800;font-size:1rem;color:#003b66;border-left:4px solid #ffb347;padding-left:12px;margin-bottom:20px}
+.card-header.red{border-left-color:#d32f2f;color:#b91c1c}
+.section-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#d32f2f;margin-bottom:.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
 @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
-
-.form-group label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #64748b;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.form-group input, .form-group select {
-  width: 100%;
-  padding: 11px 14px;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 16px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  background: #f8fafc;
-  color: #1e293b;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.form-group input:focus, .form-group select:focus {
-  outline: none;
-  border-color: #0a2f6c;
-  box-shadow: 0 0 0 3px rgba(10,47,108,0.12);
-}
-
-/* nav steps */
-.step-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
-}
-.step-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.3;
-  transition: opacity 0.3s;
-}
-.step-item.active { opacity: 1; }
-.step-item.done { opacity: 0.55; }
-.step-circle {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 0.85rem;
-  background: #1e293b;
-  color: #64748b;
-  transition: all 0.3s;
-}
-.step-item.active .step-circle {
-  background: #d32f2f;
-  color: white;
-  box-shadow: 0 2px 10px rgba(211,47,47,0.4);
-}
-.step-item.done .step-circle {
-  background: #16a34a;
-  color: white;
-}
-.step-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #94a3b8;
-}
-.step-item.active .step-label { color: #ffec9e; }
-.step-connector {
-  width: 40px;
-  height: 2px;
-  background: #1e293b;
-  border-radius: 1px;
-}
-.step-item.done + .step-connector,
-.step-item.active + .step-connector { background: #2c5282; }
-
-/* buttons */
-.btn {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 60px;
-  cursor: pointer;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  letter-spacing: 0.03em;
-}
-.btn-primary {
-  background: #d32f2f;
-  color: white;
-  box-shadow: 0 4px 12px rgba(211,47,47,0.3);
-}
-.btn-primary:hover {
-  background: #b71c1c;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(211,47,47,0.4);
-}
-.btn-secondary {
-  background: transparent;
-  color: #94a3b8;
-  border: 1.5px solid #334155;
-}
-.btn-secondary:hover { background: #1e293b; color: white; }
-.btn-accent {
-  background: #0a2f6c;
-  color: #ffec9e;
-  box-shadow: 0 4px 12px rgba(10,47,108,0.3);
-}
-.btn-accent:hover {
-  background: #083a8a;
-  transform: translateY(-1px);
-}
-.actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 24px;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-
-/* answer radio grid */
-.answer-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-}
-.answer-table th {
-  background: #0a2f6c;
-  color: white;
-  padding: 10px 8px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-.answer-table th:first-child { text-align: left; padding-left: 16px; }
-.answer-table td {
-  padding: 8px;
-  text-align: center;
-  border-bottom: 1px solid #e2e8f0;
-}
-.answer-table tr:hover td { background: #f0f4ff; }
-.answer-table td:first-child {
-  text-align: left;
-  padding-left: 16px;
-  font-weight: 700;
-  color: #0a2f6c;
-  font-size: 0.82rem;
-}
-.answer-table tr.unavailable td { opacity: 0.35; }
-.answer-table tr.unavailable td.unavail-text {
-  text-align: center;
-  font-style: italic;
-  color: #94a3b8;
-}
-.radio-wrap {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.radio-wrap input[type="radio"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #d32f2f;
-  cursor: pointer;
-}
-
-/* info bar */
-.info-bar {
-  background: #0a2f6c;
-  border-radius: 24px;
-  padding: 14px 20px;
-  margin-bottom: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  font-size: 0.8rem;
-  color: #cbd5e6;
-}
-.info-bar span { display: flex; align-items: center; gap: 4px; }
-.info-bar strong { color: #ffec9e; }
-
-/* edit key */
-details.edit-key {
-  margin-bottom: 16px;
-}
-details.edit-key summary {
-  cursor: pointer;
-  font-weight: 700;
-  color: #94a3b8;
-  font-size: 0.82rem;
-  user-select: none;
-  padding: 8px 0;
-}
-details.edit-key summary:hover { color: #ffec9e; }
-.edit-key-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
-  gap: 6px;
-  margin-top: 10px;
-}
-.edit-key-grid .ek-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  font-size: 0.7rem;
-  color: #94a3b8;
-}
-.edit-key-grid .ek-item select {
-  width: 52px;
-  padding: 3px;
-  border: 1px solid #334155;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 0.8rem;
-  background: #1e293b;
-  color: white;
-}
-
-/* score card */
-.score-card {
-  text-align: center;
-  padding: 36px 20px;
-  margin-bottom: 28px;
-  background: linear-gradient(135deg, #0a2f6c, #041a3a);
-  border-radius: 32px;
-  color: white;
-  border: 2px solid #d32f2f;
-  position: relative;
-  overflow: hidden;
-}
-.score-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -30%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(211,47,47,0.15) 0%, transparent 70%);
-  border-radius: 50%;
-}
-.score-card .student-name {
-  font-size: 0.9rem;
-  color: #ffec9e;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.score-card .big {
-  font-size: 5rem;
-  font-weight: 800;
-  line-height: 1;
-  margin: 8px 0;
-  color: white;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-.score-card .label {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.score-card .detail {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-.score-card .detail div {
-  text-align: center;
-}
-.score-card .detail div span {
-  font-size: 1.6rem;
-  font-weight: 800;
-  display: block;
-  color: white;
-}
-.score-card .detail div small {
-  font-size: 0.7rem;
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* result table */
-.result-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.82rem;
-  margin-top: 16px;
-}
-.result-table th {
-  background: #0a2f6c;
-  color: white;
-  padding: 10px 8px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-.result-table th:first-child { text-align: left; padding-left: 16px; }
-.result-table td {
-  padding: 8px;
-  text-align: center;
-  border-bottom: 1px solid #e2e8f0;
-}
-.result-table td:first-child { text-align: left; padding-left: 16px; font-weight: 700; }
-.result-table tr.correct-row td { background: #f0fdf4; }
-.result-table tr.incorrect-row td { background: #fef2f2; }
-.result-table tr.skip-row td { background: #f8fafc; opacity: 0.45; }
-
-.badge {
-  display: inline-block;
-  padding: 3px 12px;
-  border-radius: 30px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-.badge-ok { background: #16a34a; color: white; }
-.badge-err { background: #d32f2f; color: white; }
-.badge-skip { background: #64748b; color: white; }
-
-/* footer */
-footer {
-  text-align: center;
-  margin-top: 2rem;
-  padding: 1rem;
-  color: #4a6a8a;
-  font-size: 0.7rem;
-  border-top: 1px solid #1e3a5f;
-}
-
-.hidden { display: none !important; }
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-in { animation: fadeUp 0.4s ease forwards; }
-
-/* print */
-@media print {
-  body { background: white; padding: 0; }
-  .main-container { background: white; padding: 10px; box-shadow: none; border: none; border-radius: 0; }
-  .header { background: #0a2f6c !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .step-bar, .actions, .edit-key, .warn-box { display: none !important; }
-  .card { break-inside: avoid; border: 1px solid #ccc; }
-  .score-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .result-table th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .result-table tr.correct-row td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .result-table tr.incorrect-row td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-}
+.form-group label{display:block;font-size:.75rem;font-weight:700;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+.form-group input,.form-group select{width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:16px;font-family:'Inter',sans-serif;font-size:.9rem;background:#f8fafc;color:#1e293b;transition:border-color .2s,box-shadow .2s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:#0a2f6c;box-shadow:0 0 0 3px rgba(10,47,108,.12)}
+.step-bar{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:24px;flex-wrap:wrap}
+.step-item{display:flex;align-items:center;gap:8px;opacity:.3;transition:opacity .3s}
+.step-item.active{opacity:1}.step-item.done{opacity:.55}
+.step-circle{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;background:#1e293b;color:#64748b;transition:all .3s}
+.step-item.active .step-circle{background:#d32f2f;color:#fff;box-shadow:0 2px 10px rgba(211,47,47,.4)}
+.step-item.done .step-circle{background:#16a34a;color:#fff}
+.step-label{font-size:.75rem;font-weight:600;color:#94a3b8}
+.step-item.active .step-label{color:#ffec9e}
+.step-connector{width:40px;height:2px;background:#1e293b;border-radius:1px}
+.btn{font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;padding:12px 28px;border:none;border-radius:60px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;letter-spacing:.03em}
+.btn-primary{background:#d32f2f;color:#fff;box-shadow:0 4px 12px rgba(211,47,47,.3)}
+.btn-primary:hover{background:#b71c1c;transform:translateY(-1px);box-shadow:0 6px 18px rgba(211,47,47,.4)}
+.btn-secondary{background:transparent;color:#94a3b8;border:1.5px solid #334155}
+.btn-secondary:hover{background:#1e293b;color:#fff}
+.btn-accent{background:#0a2f6c;color:#ffec9e;box-shadow:0 4px 12px rgba(10,47,108,.3)}
+.btn-accent:hover{background:#083a8a;transform:translateY(-1px)}
+.actions{display:flex;gap:12px;margin-top:24px;justify-content:flex-end;flex-wrap:wrap}
+.info-bar{background:#0a2f6c;border-radius:24px;padding:14px 20px;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:16px;font-size:.8rem;color:#cbd5e6}
+.info-bar span{display:flex;align-items:center;gap:4px}
+.info-bar strong{color:#ffec9e}
+.answer-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.answer-table th{background:#0a2f6c;color:#fff;padding:10px 8px;text-align:center;font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
+.answer-table th:first-child{text-align:left;padding-left:16px}
+.answer-table td{padding:8px 6px;text-align:center;border-bottom:1px solid #e2e8f0}
+.answer-table tr:hover td{background:#f0f4ff}
+.answer-table td:first-child{text-align:left;padding-left:16px;font-weight:700;color:#0a2f6c;font-size:.82rem}
+.answer-table tr.unavailable td{opacity:.35}
+.answer-table tr.unavailable td.unavail-text{text-align:center;font-style:italic;color:#94a3b8}
+.radio-wrap{display:inline-flex;align-items:center;justify-content:center}
+.radio-wrap input[type="radio"]{width:18px;height:18px;accent-color:#d32f2f;cursor:pointer}
+.info-box,.warn-box{border-radius:24px;padding:1rem 1.2rem;margin:1rem 0;font-size:.85rem}
+.info-box{background:#eef2ff;border-left:4px solid #0a2f6c;color:#1e293b}
+.warn-box{background:#fff8e1;border-left:4px solid #f9a825;color:#5d4a00}
+.warn-box.red{background:#fef2f2;border-left-color:#d32f2f;color:#991b1b}
+details.edit-key{margin-bottom:16px}
+details.edit-key summary{cursor:pointer;font-weight:700;color:#94a3b8;font-size:.82rem;user-select:none;padding:8px 0}
+details.edit-key summary:hover{color:#ffec9e}
+.edit-key-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(65px,1fr));gap:6px;margin-top:10px}
+.edit-key-grid .ek-item{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.7rem;color:#94a3b8}
+.edit-key-grid .ek-item select{width:52px;padding:3px;border:1px solid #334155;border-radius:6px;text-align:center;font-size:.8rem;background:#1e293b;color:#fff}
+.score-card{text-align:center;padding:36px 20px;margin-bottom:28px;background:linear-gradient(135deg,#0a2f6c,#041a3a);border-radius:32px;color:#fff;border:2px solid #d32f2f;position:relative;overflow:hidden}
+.score-card::before{content:'';position:absolute;top:-50%;right:-30%;width:300px;height:300px;background:radial-gradient(circle,rgba(211,47,47,.15) 0%,transparent 70%);border-radius:50%}
+.score-card .student-name{font-size:.9rem;color:#ffec9e;font-weight:600;margin-bottom:4px}
+.score-card .big{font-size:5rem;font-weight:800;line-height:1;margin:8px 0;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.3)}
+.score-card .label{font-size:.8rem;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.score-card .detail{display:flex;justify-content:center;gap:32px;margin-top:20px;flex-wrap:wrap}
+.score-card .detail div{text-align:center}
+.score-card .detail div span{font-size:1.6rem;font-weight:800;display:block;color:#fff}
+.score-card .detail div small{font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
+.result-table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:16px}
+.result-table th{background:#0a2f6c;color:#fff;padding:10px 8px;text-align:center;font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
+.result-table th:first-child{text-align:left;padding-left:16px}
+.result-table td{padding:8px;text-align:center;border-bottom:1px solid #e2e8f0}
+.result-table td:first-child{text-align:left;padding-left:16px;font-weight:700}
+.result-table tr.correct-row td{background:#f0fdf4}
+.result-table tr.incorrect-row td{background:#fef2f2}
+.result-table tr.skip-row td{background:#f8fafc;opacity:.45}
+.badge{display:inline-block;padding:3px 12px;border-radius:30px;font-size:.7rem;font-weight:700;letter-spacing:.03em}
+.badge-ok{background:#16a34a;color:#fff}
+.badge-err{background:#d32f2f;color:#fff}
+.badge-skip{background:#64748b;color:#fff}
+footer{text-align:center;margin-top:2rem;padding:1rem;color:#4a6a8a;font-size:.7rem;border-top:1px solid #1e3a5f}
+.hidden{display:none!important}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.animate-in{animation:fadeUp .4s ease forwards}
+@media print{body{background:#fff;padding:0}.main-container{background:#fff;padding:10px;box-shadow:none;border:none;border-radius:0}.header{background:#0a2f6c!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.step-bar,.actions,.edit-key,.warn-box{display:none!important}.card{break-inside:avoid;border:1px solid #ccc}.score-card{-webkit-print-color-adjust:exact;print-color-adjust:exact}.result-table th{-webkit-print-color-adjust:exact;print-color-adjust:exact}.result-table tr.correct-row td,.result-table tr.incorrect-row td{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style>
 </head>
 <body>
 <div class="main-container">
+<div class="header">
+<div class="logo-area">
+<img src="https://i.ibb.co/0p01LzxB/logo3de.jpg" alt="Logo SEDUC SP">
+<div class="logo-text">URE CAIEIRAS — Seduc SP</div>
+</div>
+<div class="title-badge">2º SEMESTRE — CORREÇÃO AUTOMÁTICA</div>
+</div>
 
-  <!-- CABEÇALHO -->
-  <div class="header">
-    <div class="logo-area">
-      <img src="https://i.ibb.co/0p01LzxB/logo3de.jpg" alt="Logo SEDUC SP">
-      <div class="logo-text">URE CAIEIRAS — Seduc SP</div>
-    </div>
-    <div class="title-badge">CORREÇÃO AUTOMÁTICA</div>
-  </div>
+<nav class="step-bar">
+<div class="step-item active" id="si1"><div class="step-circle">1</div><span class="step-label">Cadastro</span></div>
+<div class="step-connector"></div>
+<div class="step-item" id="si2"><div class="step-circle">2</div><span class="step-label">Respostas</span></div>
+<div class="step-connector"></div>
+<div class="step-item" id="si3"><div class="step-circle">3</div><span class="step-label">Resultado</span></div>
+</nav>
 
-  <!-- STEP BAR -->
-  <nav class="step-bar">
-    <div class="step-item active" id="si1">
-      <div class="step-circle">1</div>
-      <span class="step-label">Cadastro</span>
-    </div>
-    <div class="step-connector"></div>
-    <div class="step-item" id="si2">
-      <div class="step-circle">2</div>
-      <span class="step-label">Respostas</span>
-    </div>
-    <div class="step-connector"></div>
-    <div class="step-item" id="si3">
-      <div class="step-circle">3</div>
-      <span class="step-label">Resultado</span>
-    </div>
-  </nav>
+<section class="card animate-in" id="step1">
+<div class="section-eyebrow">Etapa 1</div>
+<div class="card-header red">Dados da Avaliação — 2º Semestre</div>
+<form id="regForm" onsubmit="return startCorrection(event)">
+<div class="form-grid">
+<div class="form-group"><label for="fSchool">Nome da Escola</label><input id="fSchool" placeholder="Ex: EE Prof. Maria Silva" required></div>
+<div class="form-group"><label for="fTeacher">Nome do Professor(a)</label><input id="fTeacher" placeholder="Ex: João Santos" required></div>
+<div class="form-group"><label for="fStudent">Nome do Aluno(a)</label><input id="fStudent" placeholder="Ex: Ana Oliveira" required></div>
+<div class="form-group"><label for="fGrade">Série / Ano</label>
+<select id="fGrade" required><option value="">Selecione…</option><option>4º Ano</option><option>5º Ano</option><option>6º Ano</option><option>7º Ano</option><option>8º Ano</option><option>9º Ano</option><option>1º Série</option><option>2º Série</option><option>3º Série</option></select></div>
+<div class="form-group"><label for="fSubject">Disciplina</label>
+<select id="fSubject" required><option value="">Selecione…</option><option value="LP">LP OE — Língua Portuguesa</option><option value="MT">MT OE — Matemática</option></select></div>
+<div class="form-group"><label for="fBook">Livro</label>
+<select id="fBook" required><option value="">Selecione…</option><option value="01">Livro 01</option><option value="02">Livro 02</option><option value="03">Livro 03</option></select></div>
+</div>
+<div class="info-box">
+Selecione a <strong>disciplina</strong> (LP OE ou MT OE) e o <strong>Livro</strong> correspondente.<br>
+<strong>Observação:</strong> As questões do Livro 03 possuem <strong>5 alternativas (A–E)</strong>. Q05–Q08 de LP Livro 03 não possuem gabarito disponível.
+</div>
+<div class="actions"><button type="submit" class="btn btn-primary">Iniciar Correção →</button></div>
+</form>
+</section>
 
-  <!-- ==================== STEP 1: CADASTRO ==================== -->
-  <section class="card animate-in" id="step1">
-    <div class="section-eyebrow">Etapa 1</div>
-    <div class="card-header red">Dados da Avaliação</div>
+<section class="card hidden animate-in" id="step2">
+<div class="section-eyebrow">Etapa 2</div>
+<div class="card-header red">Lançar Respostas do Aluno</div>
+<div class="info-bar" id="infoBar"></div>
+<div id="warnBox"></div>
+<details class="edit-key"><summary>⟳ Ver / Editar Gabarito Oficial</summary><div class="edit-key-grid" id="editKeyGrid"></div></details>
+<div style="overflow-x:auto;margin:0 -8px;padding:0 8px"><table class="answer-table" id="ansTable"></table></div>
+<div class="actions">
+<button class="btn btn-secondary" onclick="goStep(1)">← Voltar</button>
+<button class="btn btn-primary" onclick="gradeTest()">Corrigir Prova ✓</button>
+</div>
+</section>
 
-    <form id="regForm" onsubmit="return startCorrection(event)">
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="fSchool">Nome da Escola</label>
-          <input id="fSchool" placeholder="Ex: EE Prof. Maria Silva" required>
-        </div>
-        <div class="form-group">
-          <label for="fTeacher">Nome do Professor(a)</label>
-          <input id="fTeacher" placeholder="Ex: João Santos" required>
-        </div>
-        <div class="form-group">
-          <label for="fStudent">Nome do Aluno(a)</label>
-          <input id="fStudent" placeholder="Ex: Ana Oliveira" required>
-        </div>
-        <div class="form-group">
-          <label for="fGrade">Série / Ano</label>
-          <select id="fGrade" required>
-            <option value="">Selecione…</option>
-            <option>4º Ano</option>
-            <option>5º Ano</option>
-            <option>6º Ano</option>
-            <option>7º Ano</option>
-            <option>8º Ano</option>
-            <option>9º Ano</option>
-            <option>1º Série</option>
-            <option>2º Série</option>
-            <option>3º Série</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="fSubject">Disciplina</label>
-          <select id="fSubject" required>
-            <option value="">Selecione…</option>
-            <option value="LP">LP OE — Língua Portuguesa</option>
-            <option value="MT">MT OE — Matemática</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="fBook">Livro</label>
-          <select id="fBook" required>
-            <option value="">Selecione…</option>
-            <option value="01">Livro 01</option>
-            <option value="02">Livro 02</option>
-            <option value="03">Livro 03</option>
-          </select>
-        </div>
-      </div>
+<section class="card hidden animate-in" id="step3">
+<div class="section-eyebrow">Etapa 3</div>
+<div class="card-header red">Resultado da Correção</div>
+<div id="resultArea"></div>
+<div class="actions">
+<button class="btn btn-secondary" onclick="goStep(1)">Nova Correção</button>
+<button class="btn btn-accent" onclick="exportCSV()">⬇ Exportar CSV</button>
+<button class="btn btn-primary" onclick="window.print()">🖨 Imprimir</button>
+</div>
+</section>
 
-      <div class="info-box">
-        Selecione a <strong>disciplina</strong> (LP OE ou MT OE) e o <strong>Livro</strong> correspondente à aplicação. O sistema carregará o gabarito automaticamente.
-      </div>
-
-      <div class="actions">
-        <button type="submit" class="btn btn-primary">Iniciar Correção →</button>
-      </div>
-    </form>
-  </section>
-
-  <!-- ==================== STEP 2: RESPOSTAS ==================== -->
-  <section class="card hidden animate-in" id="step2">
-    <div class="section-eyebrow">Etapa 2</div>
-    <div class="card-header red">Lançar Respostas do Aluno</div>
-
-    <div class="info-bar" id="infoBar"></div>
-    <div id="warnBox"></div>
-
-    <details class="edit-key">
-      <summary>⟳ Ver / Editar Gabarito Oficial</summary>
-      <div class="edit-key-grid" id="editKeyGrid"></div>
-    </details>
-
-    <div style="overflow-x:auto; margin: 0 -8px; padding: 0 8px;">
-      <table class="answer-table" id="ansTable"></table>
-    </div>
-
-    <div class="actions">
-      <button class="btn btn-secondary" onclick="goStep(1)">← Voltar</button>
-      <button class="btn btn-primary" onclick="gradeTest()">Corrigir Prova ✓</button>
-    </div>
-  </section>
-
-  <!-- ==================== STEP 3: RESULTADO ==================== -->
-  <section class="card hidden animate-in" id="step3">
-    <div class="section-eyebrow">Etapa 3</div>
-    <div class="card-header red">Resultado da Correção</div>
-
-    <div id="resultArea"></div>
-
-    <div class="actions">
-      <button class="btn btn-secondary" onclick="goStep(1)">Nova Correção</button>
-      <button class="btn btn-accent" onclick="exportCSV()">⬇ Exportar CSV</button>
-      <button class="btn btn-primary" onclick="window.print()">🖨 Imprimir</button>
-    </div>
-  </section>
-
-  <footer>
-    URE CAIEIRAS — Seduc SP · Sistema de Correção Automática · Avaliação Diagnóstica 2º Semestre — São Paulo em Ação
-  </footer>
-
+<footer>URE CAIEIRAS — Seduc SP · Sistema de Correção Automática · Avaliação Diagnóstica 2º Semestre — São Paulo em Ação</footer>
 </div>
 
 <script>
 /* ============================================================
-   GABARITOS OFICIAIS — São Paulo em Ação
+   GABARITOS OFICIAIS — São Paulo em Ação — 2º Semestre
    ============================================================ */
 const KEYS = {
   LP_01: {
     start: 1,
     answers: ['C','C','A','C','B','C','A','B','B','D','C','A','B','D','A','B','B','C','A','B','C','A'],
-    unavail: []
+    unavail: [],
+    fiveOpt: false
   },
   MT_01: {
     start: 23,
     answers: ['A','D','A','C','C','D','D','C','C','C','B','D','B','B','B','C','B','B','D','C','D','D'],
-    unavail: []
+    unavail: [],
+    fiveOpt: false
   },
   LP_02: {
     start: 1,
     answers: ['D','B','A','C','A','C','D','C','A','C','C','A','D','D','C','B','D','B','C','C','C','C','D','B','B','A'],
-    unavail: []
+    unavail: [],
+    fiveOpt: false
   },
   MT_02: {
     start: 27,
     answers: ['A','D','D','D','D','A','C','A','B','A','A','C','C','A','D','C','B','D','A','C','D','A','C','A','C','D'],
-    unavail: []
+    unavail: [],
+    fiveOpt: false
   },
   LP_03: {
     start: 1,
-    answers: ['E','B','C','C','E','B','C','D','C','C','D','B','D','C','B','D','D','A','C','E','B','D','E','E','B','B'],
-    unavail: []
+    // Q05–Q08 (índices 4–7): sem gabarito disponível
+    answers: ['E','B','C','C',null,null,null,null,'C','A','D','B','C','C','B','D','A','B'],
+    unavail: [4,5,6,7],
+    fiveOpt: true
   },
   MT_03: {
     start: 27,
-    answers: [
-      'D','A','B','C','E','E','A','D','C','C','D','D','A','A','C','A','C','C',
-      null,null,        // questões 45 e 46 – não constam no PDF
-      'E','B','C','D','D','E'
-    ],
-    unavail: [18, 19]   // índices 18 e 19 = questões 45 e 46
+    // Q27–Q52 = 26 questões, todas com 5 alternativas (A–E)
+    answers: ['D','A','A','C','E','E','A','D','C','A','B','D','C','C','A','C','B','D','A','C','C','D','E','C','D','E'],
+    unavail: [],
+    fiveOpt: true
   }
 };
 
@@ -733,13 +215,13 @@ let currentMeta = {};
 
 /* ======================== NAVEGAÇÃO ======================== */
 function goStep(n) {
-  [1, 2, 3].forEach(i => {
-    document.getElementById('step' + i).classList.toggle('hidden', i !== n);
-    const si = document.getElementById('si' + i);
-    si.classList.toggle('active', i === n);
-    si.classList.toggle('done', i < n);
+  [1,2,3].forEach(i => {
+    document.getElementById('step'+i).classList.toggle('hidden', i!==n);
+    const s = document.getElementById('si'+i);
+    s.classList.toggle('active', i===n);
+    s.classList.toggle('done', i<n);
   });
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
 /* ======================== STEP 1 → 2 ======================== */
@@ -747,13 +229,13 @@ function startCorrection(e) {
   e.preventDefault();
   const subj = document.getElementById('fSubject').value;
   const book = document.getElementById('fBook').value;
-  const key = subj + '_' + book;
+  const key = subj+'_'+book;
 
   if (!KEYS[key]) {
     alert('Gabarito não disponível para esta combinação.');
     return false;
   }
-
+  // MT OE Livro 01 e MT OE Livro 03 existem agora
   currentKey = JSON.parse(JSON.stringify(KEYS[key]));
   currentMeta = {
     school:  document.getElementById('fSchool').value,
@@ -763,7 +245,6 @@ function startCorrection(e) {
     subject: subj,
     book:    book
   };
-
   buildAnswerGrid();
   goStep(2);
   return false;
@@ -773,10 +254,8 @@ function startCorrection(e) {
 function buildAnswerGrid() {
   const k = currentKey;
   const m = currentMeta;
-
-  // Define as opções (5 para livro 3, 4 para os demais)
-  const isBook3 = m.book === '03';
-  const opts = isBook3 ? ['A','B','C','D','E'] : ['A','B','C','D'];
+  const opts = k.fiveOpt ? ['A','B','C','D','E'] : ['A','B','C','D'];
+  const colCount = opts.length;
 
   document.getElementById('infoBar').innerHTML =
     `<span><strong>Escola:</strong> ${m.school}</span>
@@ -786,40 +265,42 @@ function buildAnswerGrid() {
      <span><strong>Disciplina:</strong> ${LABELS[m.subject]}</span>
      <span><strong>Livro:</strong> ${m.book}</span>`;
 
-  // Aviso para questões 45 e 46 (Matemática Livro 3)
-  let warnMsg = 'Verifique o gabarito clicando em "Ver / Editar Gabarito Oficial" antes de corrigir.';
-  if (m.subject === 'MT' && m.book === '03') {
-    warnMsg = 'Atenção: as questões 45 e 46 não constam no gabarito do PDF e serão desconsideradas na correção. Você pode editá‑las manualmente.';
+  let warn = '';
+  if (m.subject==='LP' && m.book==='03') {
+    warn = '<div class="warn-box">Atenção: Q05 a Q08 não possuem gabarito e serão desconsideradas. Questões com <strong>5 alternativas (A–E)</strong>.</div>';
+  } else if (m.subject==='MT' && m.book==='03') {
+    warn = '<div class="warn-box">Questões com <strong>5 alternativas (A–E)</strong>. Verifique o gabarito antes de corrigir.</div>';
+  } else {
+    warn = '<div class="warn-box">Verifique o gabarito em "Ver / Editar Gabarito Oficial" antes de corrigir.</div>';
   }
-  document.getElementById('warnBox').innerHTML = `<div class="warn-box">${warnMsg}</div>`;
+  document.getElementById('warnBox').innerHTML = warn;
 
   /* edit key grid */
   let ekHTML = '';
   k.answers.forEach((a, i) => {
     const qn = k.start + i;
-    const isUnavail = k.unavail.includes(i);
+    const isU = k.unavail.includes(i);
     ekHTML += `<div class="ek-item"><span>Q${String(qn).padStart(2,'0')}</span>
-      <select id="ek_${i}" ${isUnavail ? 'disabled' : ''}>
+      <select id="ek_${i}" ${isU?'disabled':''}>
         <option value="">—</option>
-        ${opts.map(l => `<option value="${l}" ${a === l ? 'selected' : ''}>${l}</option>`).join('')}
+        ${opts.map(l=>`<option value="${l}" ${a===l?'selected':''}>${l}</option>`).join('')}
       </select></div>`;
   });
   document.getElementById('editKeyGrid').innerHTML = ekHTML;
 
   /* answer table */
-  let th = '<tr><th>Questão</th>' + opts.map(l => `<th>${l}</th>`).join('') + '</tr>';
+  let th = '<tr><th>Questão</th>'+opts.map(o=>`<th>${o}</th>`).join('')+'</tr>';
   let rows = '';
   k.answers.forEach((_, i) => {
     const qn = k.start + i;
-    const isUnavail = k.unavail.includes(i);
-    const qLabel = 'Q' + String(qn).padStart(2, '0');
-    if (isUnavail) {
-      rows += `<tr class="unavailable"><td>${qLabel}</td><td colspan="${opts.length}" class="unavail-text">Gabarito indisponível</td></tr>`;
+    const isU = k.unavail.includes(i);
+    const ql = 'Q'+String(qn).padStart(2,'0');
+    if (isU) {
+      rows += `<tr class="unavailable"><td>${ql}</td><td colspan="${colCount}" class="unavail-text">Gabarito indisponível</td></tr>`;
     } else {
-      const cells = opts.map(l =>
+      rows += `<tr><td>${ql}</td>${opts.map(l=>
         `<td><label class="radio-wrap"><input type="radio" name="q${i}" value="${l}"></label></td>`
-      ).join('');
-      rows += `<tr><td>${qLabel}</td>${cells}</tr>`;
+      ).join('')}</tr>`;
     }
   });
   document.getElementById('ansTable').innerHTML = th + rows;
@@ -828,12 +309,12 @@ function buildAnswerGrid() {
 /* ======================== CORRIGIR ======================== */
 function gradeTest() {
   const k = currentKey;
-  const m = currentMeta;
+  const opts = k.fiveOpt ? ['A','B','C','D','E'] : ['A','B','C','D'];
 
-  /* apply any edits */
+  /* apply edits */
   k.answers.forEach((_, i) => {
-    const sel = document.getElementById('ek_' + i);
-    if (sel && !sel.disabled && sel.value) k.answers[i] = sel.value;
+    const s = document.getElementById('ek_'+i);
+    if (s && !s.disabled && s.value) k.answers[i] = s.value;
   });
 
   const results = [];
@@ -841,96 +322,66 @@ function gradeTest() {
 
   k.answers.forEach((ans, i) => {
     const qn = k.start + i;
-    const isUnavail = k.unavail.includes(i);
-    if (isUnavail || ans === null) {
-      results.push({ q: qn, student: '—', key: '—', status: 'skip' });
+    const isU = k.unavail.includes(i);
+    if (isU) {
+      results.push({q:qn,student:'—',key:'—',status:'skip'});
       return;
     }
     total++;
-    const radios = document.querySelectorAll(`input[name="q${i}"]`);
     let picked = '';
-    radios.forEach(r => { if (r.checked) picked = r.value; });
+    document.querySelectorAll(`input[name="q${i}"]`).forEach(r=>{if(r.checked)picked=r.value});
     const ok = picked === ans;
     if (ok) correct++;
-    results.push({
-      q: qn,
-      student: picked || '—',
-      key: ans,
-      status: picked ? (ok ? 'ok' : 'err') : 'err'
-    });
+    results.push({q:qn, student:picked||'—', key:ans, status:picked?(ok?'ok':'err'):'err'});
   });
 
-  const pct = total ? Math.round(correct / total * 100) : 0;
-  const nota = total ? (correct / total * 10).toFixed(1) : '0.0';
+  const pct = total ? Math.round(correct/total*100) : 0;
+  const nota = total ? (correct/total*10).toFixed(1) : '0.0';
 
-  /* build result HTML */
-  let html = `
-    <div class="score-card">
-      <div class="student-name">${m.student} — ${LABELS[m.subject]} — Livro ${m.book}</div>
-      <div class="big">${nota}</div>
-      <div class="label">NOTA (0 a 10)</div>
-      <div class="detail">
-        <div><span>${correct}</span><small>Acertos</small></div>
-        <div><span>${total - correct}</span><small>Erros</small></div>
-        <div><span>${total}</span><small>Total válidas</small></div>
-        <div><span>${pct}%</span><small>Percentual</small></div>
-      </div>
-    </div>`;
+  let html = `<div class="score-card">
+    <div class="student-name">${currentMeta.student} — ${LABELS[currentMeta.subject]} — Livro ${currentMeta.book}</div>
+    <div class="big">${nota}</div>
+    <div class="label">NOTA (0 a 10)</div>
+    <div class="detail">
+      <div><span>${correct}</span><small>Acertos</small></div>
+      <div><span>${total-correct}</span><small>Erros</small></div>
+      <div><span>${total}</span><small>Total válidas</small></div>
+      <div><span>${pct}%</span><small>Percentual</small></div>
+    </div></div>`;
 
   html += `<div style="overflow-x:auto"><table class="result-table">
     <tr><th>Questão</th><th>Resposta Aluno</th><th>Gabarito</th><th>Resultado</th></tr>`;
 
   results.forEach(r => {
-    const cls = r.status === 'ok' ? 'correct-row' : r.status === 'skip' ? 'skip-row' : 'incorrect-row';
-    const badge = r.status === 'ok'
-      ? '<span class="badge badge-ok">✓ Acerto</span>'
-      : r.status === 'skip'
-        ? '<span class="badge badge-skip">— Indisp.</span>'
-        : '<span class="badge badge-err">✗ Erro</span>';
-    html += `<tr class="${cls}"><td>Q${String(r.q).padStart(2,'0')}</td><td>${r.student}</td><td>${r.key}</td><td>${badge}</td></tr>`;
+    const cls = r.status==='ok'?'correct-row':r.status==='skip'?'skip-row':'incorrect-row';
+    const b = r.status==='ok'?'<span class="badge badge-ok">✓ Acerto</span>'
+            : r.status==='skip'?'<span class="badge badge-skip">— Indisp.</span>'
+            :'<span class="badge badge-err">✗ Erro</span>';
+    html += `<tr class="${cls}"><td>Q${String(r.q).padStart(2,'0')}</td><td>${r.student}</td><td>${r.key}</td><td>${b}</td></tr>`;
   });
 
   html += '</table></div>';
-  html += `<p style="margin-top:16px;font-size:0.75rem;color:#94a3b8">
-    Correção realizada em ${new Date().toLocaleDateString('pt-BR')} às ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}.
-    Escola: ${m.school} · Professor(a): ${m.teacher}.
-  </p>`;
-
+  html += `<p style="margin-top:16px;font-size:.75rem;color:#94a3b8">Correção: ${new Date().toLocaleDateString('pt-BR')} às ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}. Escola: ${currentMeta.school}. Professor(a): ${currentMeta.teacher}.</p>`;
   document.getElementById('resultArea').innerHTML = html;
-  window._lastResults = { results, correct, total, pct, nota };
+  window._lastResults = {results,correct,total,pct,nota};
   goStep(3);
 }
 
 /* ======================== EXPORT CSV ======================== */
 function exportCSV() {
   if (!window._lastResults) return;
-  const m = currentMeta, r = window._lastResults;
-  const lines = [
-    'Escola;Professor;Aluno;Série;Disciplina;Livro',
-    `"${m.school}";"${m.teacher}";"${m.student}";"${m.grade}";"${LABELS[m.subject]}";"${m.book}"`,
-    '',
-    'Questão;Resposta Aluno;Gabarito;Resultado'
-  ];
-  r.results.forEach(x => {
-    lines.push(
-      `Q${String(x.q).padStart(2,'0')};${x.student};${x.key};${
-        x.status === 'ok' ? 'Correto' : x.status === 'skip' ? 'Indisponível' : 'Incorreto'
-      }`
-    );
-  });
-  lines.push('',
-    `Acertos;${r.correct}`,
-    `Erros;${r.total - r.correct}`,
-    `Total válidas;${r.total}`,
-    `Percentual;${r.pct}%`,
-    `Nota;${r.nota}`
-  );
-  const blob = new Blob(['\uFEFF' + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `resultado_${m.student.replace(/\s+/g,'_')}_L${m.book}_${m.subject}.csv`;
-  a.click();
-  URL.revokeObjectURL(a.href);
+  const m=currentMeta,r=window._lastResults;
+  const lines=['Escola;Professor;Aluno;Série;Disciplina;Livro',
+    `"${m.school}";"${m.teacher}";"${m.student}";"${m.grade}";"${LABELS[m.subject]}";"${m.book}"`,'',
+    'Questão;Resposta Aluno;Gabarito;Resultado'];
+  r.results.forEach(x=>{
+    lines.push(`Q${String(x.q).padStart(2,'0')};${x.student};${x.key};${x.status==='ok'?'Correto':x.status==='skip'?'Indisponível':'Incorreto'}`)});
+  lines.push('',`Acertos;${r.correct}`,`Erros;${r.total-r.correct}`,`Total válidas;${r.total}`,`Percentual;${r.pct}%`,`Nota;${r.nota}`);
+  const blob=new Blob(['\uFEFF'+lines.join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`resultado_${m.student.replace(/\s+/g,'_')}_L${m.book}_${m.subject}_2sem.csv`;
+  a.click();URL.revokeObjectURL(a.href);
 }
 </script>
 </body>
