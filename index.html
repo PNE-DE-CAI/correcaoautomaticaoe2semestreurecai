@@ -605,9 +605,9 @@ footer {
             <option>7º Ano</option>
             <option>8º Ano</option>
             <option>9º Ano</option>
-            <option>1ª Serie</option>
-            <option>2ª Serie</option>
-            <option>3ª Serie</option>
+            <option>1º Série</option>
+            <option>2º Série</option>
+            <option>3º Série</option>
           </select>
         </div>
         <div class="form-group">
@@ -709,8 +709,17 @@ const KEYS = {
   },
   LP_03: {
     start: 1,
-    answers: ['A','B','C','A',null,null,null,null,'A','A','D','B','A','A','B','D','A','B'],
-    unavail: [4,5,6,7]
+    answers: ['E','B','C','C','E','B','C','D','C','C','D','B','D','C','B','D','D','A','C','E','B','D','E','E','B','B'],
+    unavail: []
+  },
+  MT_03: {
+    start: 27,
+    answers: [
+      'D','A','B','C','E','E','A','D','C','C','D','D','A','A','C','A','C','C',
+      null,null,        // questões 45 e 46 – não constam no PDF
+      'E','B','C','D','D','E'
+    ],
+    unavail: [18, 19]   // índices 18 e 19 = questões 45 e 46
   }
 };
 
@@ -744,10 +753,6 @@ function startCorrection(e) {
     alert('Gabarito não disponível para esta combinação.');
     return false;
   }
-  if (subj === 'MT' && book === '03') {
-    alert('O Livro 03 não possui questões de Matemática (MT OE) disponíveis.');
-    return false;
-  }
 
   currentKey = JSON.parse(JSON.stringify(KEYS[key]));
   currentMeta = {
@@ -769,6 +774,10 @@ function buildAnswerGrid() {
   const k = currentKey;
   const m = currentMeta;
 
+  // Define as opções (5 para livro 3, 4 para os demais)
+  const isBook3 = m.book === '03';
+  const opts = isBook3 ? ['A','B','C','D','E'] : ['A','B','C','D'];
+
   document.getElementById('infoBar').innerHTML =
     `<span><strong>Escola:</strong> ${m.school}</span>
      <span><strong>Professor(a):</strong> ${m.teacher}</span>
@@ -777,10 +786,12 @@ function buildAnswerGrid() {
      <span><strong>Disciplina:</strong> ${LABELS[m.subject]}</span>
      <span><strong>Livro:</strong> ${m.book}</span>`;
 
-  const warn = (m.subject === 'LP' && m.book === '03')
-    ? '<div class="warn-box">Atenção: As questões Q05 a Q08 deste livro não possuem gabarito disponível e serão desconsideradas na correção.</div>'
-    : '<div class="warn-box">Verifique o gabarito clicando em "Ver / Editar Gabarito Oficial" antes de corrigir.</div>';
-  document.getElementById('warnBox').innerHTML = warn;
+  // Aviso para questões 45 e 46 (Matemática Livro 3)
+  let warnMsg = 'Verifique o gabarito clicando em "Ver / Editar Gabarito Oficial" antes de corrigir.';
+  if (m.subject === 'MT' && m.book === '03') {
+    warnMsg = 'Atenção: as questões 45 e 46 não constam no gabarito do PDF e serão desconsideradas na correção. Você pode editá‑las manualmente.';
+  }
+  document.getElementById('warnBox').innerHTML = `<div class="warn-box">${warnMsg}</div>`;
 
   /* edit key grid */
   let ekHTML = '';
@@ -790,22 +801,22 @@ function buildAnswerGrid() {
     ekHTML += `<div class="ek-item"><span>Q${String(qn).padStart(2,'0')}</span>
       <select id="ek_${i}" ${isUnavail ? 'disabled' : ''}>
         <option value="">—</option>
-        ${['A','B','C','D'].map(l => `<option value="${l}" ${a === l ? 'selected' : ''}>${l}</option>`).join('')}
+        ${opts.map(l => `<option value="${l}" ${a === l ? 'selected' : ''}>${l}</option>`).join('')}
       </select></div>`;
   });
   document.getElementById('editKeyGrid').innerHTML = ekHTML;
 
   /* answer table */
-  let th = '<tr><th>Questão</th><th>A</th><th>B</th><th>C</th><th>D</th></tr>';
+  let th = '<tr><th>Questão</th>' + opts.map(l => `<th>${l}</th>`).join('') + '</tr>';
   let rows = '';
   k.answers.forEach((_, i) => {
     const qn = k.start + i;
     const isUnavail = k.unavail.includes(i);
     const qLabel = 'Q' + String(qn).padStart(2, '0');
     if (isUnavail) {
-      rows += `<tr class="unavailable"><td>${qLabel}</td><td colspan="4" class="unavail-text">Gabarito indisponível</td></tr>`;
+      rows += `<tr class="unavailable"><td>${qLabel}</td><td colspan="${opts.length}" class="unavail-text">Gabarito indisponível</td></tr>`;
     } else {
-      const cells = ['A','B','C','D'].map(l =>
+      const cells = opts.map(l =>
         `<td><label class="radio-wrap"><input type="radio" name="q${i}" value="${l}"></label></td>`
       ).join('');
       rows += `<tr><td>${qLabel}</td>${cells}</tr>`;
@@ -817,6 +828,7 @@ function buildAnswerGrid() {
 /* ======================== CORRIGIR ======================== */
 function gradeTest() {
   const k = currentKey;
+  const m = currentMeta;
 
   /* apply any edits */
   k.answers.forEach((_, i) => {
@@ -830,7 +842,7 @@ function gradeTest() {
   k.answers.forEach((ans, i) => {
     const qn = k.start + i;
     const isUnavail = k.unavail.includes(i);
-    if (isUnavail) {
+    if (isUnavail || ans === null) {
       results.push({ q: qn, student: '—', key: '—', status: 'skip' });
       return;
     }
@@ -854,7 +866,7 @@ function gradeTest() {
   /* build result HTML */
   let html = `
     <div class="score-card">
-      <div class="student-name">${currentMeta.student} — ${LABELS[currentMeta.subject]} — Livro ${currentMeta.book}</div>
+      <div class="student-name">${m.student} — ${LABELS[m.subject]} — Livro ${m.book}</div>
       <div class="big">${nota}</div>
       <div class="label">NOTA (0 a 10)</div>
       <div class="detail">
@@ -881,7 +893,7 @@ function gradeTest() {
   html += '</table></div>';
   html += `<p style="margin-top:16px;font-size:0.75rem;color:#94a3b8">
     Correção realizada em ${new Date().toLocaleDateString('pt-BR')} às ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}.
-    Escola: ${currentMeta.school} · Professor(a): ${currentMeta.teacher}.
+    Escola: ${m.school} · Professor(a): ${m.teacher}.
   </p>`;
 
   document.getElementById('resultArea').innerHTML = html;
